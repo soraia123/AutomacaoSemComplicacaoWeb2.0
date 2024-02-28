@@ -27,11 +27,15 @@ public class LoginPage {
     }
 
     public void setInpUserName(String username){
-        loginMap.inpUserName.sendKeys(username);
+        if (username != null) {
+            loginMap.inpUserName.sendKeys(username);
+        }
     }
 
     public void setInpPassword(String password){
-        loginMap.inpPassword.sendKeys(password);
+        if (password != null) {
+            loginMap.inpPassword.sendKeys(password);
+        }
     }
 
     public void clickInpRemember(){
@@ -56,5 +60,10 @@ public boolean isBtnSignIn(){
 
     public void invisibilityofBtnFechar(){
         Driver.invisibilityof(loginMap.btnFechar);
+    }
+
+    public void aguardaLoader(){
+        String value;
+        Driver.atributChange(loginMap.divLoader, "display", "none");
     }
 }
