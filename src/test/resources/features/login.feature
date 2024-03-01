@@ -1,5 +1,5 @@
 #language:pt
-
+@login
 Funcionalidade: Login
 
   Contexto:
@@ -20,6 +20,7 @@ Funcionalidade: Login
     Quando for realizado um clique no Link Create New Account
     Então a página Create New Account deve ser exibida
 
+  @loginComSucesso
   Esquema do Cenario: Realizar login com <identificacao>
     Quando os campos de login  sejam preenchidos da seguinte forma:
       | login    | <login>    |
@@ -29,11 +30,11 @@ Funcionalidade: Login
     Então deve ser possivel logar no sistema
 
     Exemplos:
-      | identificacao       | login   | password | remember |
-      | campos obrigatorios | chronos | senha    | false    |
-      | todos os campos     | chronos | senha    | true     |
+      | identificacao       | login         | password | remember |
+      | campos obrigatorios | chronossoraia | Senha123 | false    |
+      | todos os campos     | chronossoraia | Senha123 | true     |
 
-
+  @loginInvalido
   Esquema do Cenario: Realizar login com <identificacao>
     Quando os campos de login  sejam preenchidos da seguinte forma:
       | login    | <login>    |
@@ -43,9 +44,9 @@ Funcionalidade: Login
     Então o sistema deve exibir uma mensagem de erro
 
     Exemplos:
-      | identificacao    | login    | password | remember |
-      | usuario invalido | invalido | senha    | false    |
-      | senha invalida   | chronos  | invalida | false    |
+      | identificacao    | login         | password | remember |
+      | usuario invalido | invalido      | Senha123 | false    |
+      | senha invalida   | chronossoraia | invalida | false    |
 
   @dadosEmBranco
   Esquema do Cenario: Realizar login com <identificacao>
@@ -56,7 +57,7 @@ Funcionalidade: Login
     Então o botão sign in deve permanecer desabilitado
 
     Exemplos:
-      | identificacao     | login   | password | remember |
-      | usuario em branco |         | senha    | false    |
-      | senha em barnco   | chronos |          | false    |
+      | identificacao     | login         | password | remember |
+      | usuario em branco |               | Senha123 | false    |
+      | senha em barnco   | chronossoraia |          | false    |
 
