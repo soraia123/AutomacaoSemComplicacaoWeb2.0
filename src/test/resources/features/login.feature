@@ -5,8 +5,8 @@ Funcionalidade: Login
   Contexto:
     Dado que a modal esteja sendo exibida
 
-  @fecharModal
-  Cenário: Fechar a modal ao clicar fora da mesma
+ @fecharModal
+ Cenário: Fechar a modal ao clicar fora da mesma
     Quando for realizado um clique fora da modal
     Então a janela modal deve ser fechada
 
@@ -15,7 +15,7 @@ Funcionalidade: Login
     Quando for realizado um clique no ícone de fechar a modal
     Então a janela modal deve ser fechada
 
-  @CreateNewAccount
+  @createNewAccount
   Cenário: Link Create New Account
     Quando for realizado um clique no Link Create New Account
     Então a página Create New Account deve ser exibida
