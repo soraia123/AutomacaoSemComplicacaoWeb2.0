@@ -42,28 +42,34 @@ public class LoginPage {
         loginMap.inpRemember.click();
 
    }
-   public void clickLinkCreateAccount(){
+public void clickLinkCreateAccount(){
         loginMap.linkCreateAccount.click();
    }
 
-    public void clickBtnSignIn(){
+public void clickBtnSignIn(){
         loginMap.btnSignIn.click();
     }
 
 public boolean isBtnSignIn(){
         return loginMap.btnSignIn.isEnabled();
     }
-
-    public void visibilityofBtnFechar(){
+public void visibilityofBtnFechar(){
         Driver.visibilityof(loginMap.btnFechar);
     }
 
-    public void invisibilityofBtnFechar(){
+public void invisibilityofBtnFechar(){
         Driver.invisibilityof(loginMap.btnFechar);
     }
 
-    public void aguardaLoader(){
-        String value;
-        Driver.atributChange(loginMap.divLoader, "display", "none");
-    }
+public void aguardaLoader(){Driver.atributChange(loginMap.divLoader, "display", "none");}
+public String getUsuarioLogado(){
+        Driver.visibilityof(loginMap.textLogado);
+        return loginMap.textLogado.getText();
+}
+public String getErroLogin(){
+        Driver.visibilityof(loginMap.textErroLogin);
+        return loginMap.textErroLogin.getText();
+}
+
+
 }
