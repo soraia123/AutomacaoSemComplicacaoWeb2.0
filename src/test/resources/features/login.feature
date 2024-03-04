@@ -12,8 +12,8 @@ Funcionalidade: Login
 
   @fecharModalIcone
   Cenário: Fechar a modal ao clicar no ícone fechar
-    Quando for realizado um clique no ícone de fechar a modal
-    Então a janela modal deve ser fechada
+  Quando for realizado um clique no ícone de fechar a modal
+  Então a janela modal deve ser fechada
 
   @CreateNewAccount
   Cenário: Link Create New Account

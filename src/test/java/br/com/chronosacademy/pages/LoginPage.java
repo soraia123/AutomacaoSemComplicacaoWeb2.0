@@ -50,7 +50,7 @@ public class LoginPage {
         loginMap.btnSignIn.click();
     }
 
-public boolean isBtnSignIn(){
+    public boolean isBtnSignIn(){
         return loginMap.btnSignIn.isEnabled();
     }
 
@@ -64,6 +64,16 @@ public boolean isBtnSignIn(){
 
     public void aguardaLoader(){
         String value;
-        Driver.atributChange(loginMap.divLoader, "display", "none");
+        Driver.atributChange(loginMap.divLoader, "display", "none");}
+
+    public String getusuarioLogado(){
+        Driver.visibilityof(loginMap.textLogado);
+        return loginMap.textLogado.getText();
+    }
+
+    public String getErroLogin(){
+        Driver.visibilityof((loginMap.textErroLogin));
+        return loginMap.textErroLogin.getText();
+
     }
 }
